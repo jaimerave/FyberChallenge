@@ -1,0 +1,16 @@
+<h1>Fyber Offers</h1>
+
+<div class="row">
+  <%= render partial: "search_form" %>
+</div>
+
+<div id='row results'>
+  <h2>Results</h2>
+  <% if @offers.blank? %>
+    <%= render partial: 'no_offers' %>
+  <% else %>
+    <%= render partial: 'offer', collection: @offers %>
+  <% end %>
+</div>
+
+</div>
